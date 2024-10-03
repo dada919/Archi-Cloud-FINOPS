@@ -1,9 +1,7 @@
+import logging
 import azure.functions as func
 
-app = func.FunctionApp()
+def main(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Python HTTP trigger function processed a request.')
 
-@app.function_name(name="LogRequestFunction")
-@app.route(route="logrequest", auth_level=func.AuthLevel.ANONYMOUS)
-def log_request(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info(f"Request received: {req.get_body()}")
-    return func.HttpResponse("Log received!", status_code=200)
+    return func.HttpResponse("Hello, World!", status_code=200)
