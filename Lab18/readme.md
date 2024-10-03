@@ -14,7 +14,7 @@
 
 ## 3. Publish remote desktop applications.
 
-Impossible car l'abonnement ne le permet pas (pas assez de crédit)
+![remote desktop](./3.PNG)
 
 ---
 
